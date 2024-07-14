@@ -9,16 +9,16 @@ func canCompleteStatation(gas []int, cost []int) int {
 	for i := 0; i < len(gas); i++ {
 
 		tank = tank + gas[i] - cost[i]
+		total = total + tank
 
 		if tank < 0 {
-			total = total + tank
 			tank = 0
 			start = i + 1
 		}
 
 	}
 
-	if tank+total < 0 {
+	if total < 0 {
 		return -1
 	}
 
