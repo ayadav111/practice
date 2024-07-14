@@ -8,6 +8,14 @@ Return the minimum starting gas station's index if you can travel around the cir
 
 You can only travel in one direction. i to i+1, i+2, ... n-1, 0, 1, 2.. Completing the circuit means starting at i and ending up at i again.
 
+**Input:**
+
+A = [1,2,3,4,5]
+
+B = [3,4,5,1,2]
+
+Output: 3
+
 **SOLUTION:**
 
 - In any station between A and B, let’s say C. C will have gas left in our tank, if we go from A to that station. We can’t reach B from A with some gas(maybe 0) left in the tank in C, so we can’t reach B from C with an empty tank.
